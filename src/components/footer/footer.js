@@ -1,10 +1,8 @@
 /* eslint-disable no-undef */
 
 import Vue from 'vue';
-import template from './homepage.html'
-import styles from './homepage.less'
-import footer from '../footer/footer'
-
+import template from './footer.html'
+import styles from './footer.less'
 
 export default Vue.extend({
   template: template,

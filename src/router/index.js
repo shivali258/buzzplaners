@@ -4,6 +4,7 @@ import homepage from '../components/homepage/homepage';
 import fixeddeparture from '../components/fixeddepature/fixeddeparture'
 import admin from '../components/admin/admin'
 import hotel from '../components/hotelpart/hotelpart'
+import footer from '../components/footer/footer'
 Vue.use(Router);
 
 export default new Router({
@@ -19,6 +20,11 @@ export default new Router({
   path:'/fixeddeparture',
   name: 'fixeddeparture',
   component: fixeddeparture,
+},
+{
+  path:'/footer',
+  name: 'footer',
+  component: footer,
 },
 
 {

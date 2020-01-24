@@ -20,7 +20,8 @@ export default Vue.extend({
       parse_csv: [],
       sortOrders:{},
       sortKey: '',
-      file:''
+      file:'',
+      URL:''
   
       
     };
@@ -101,7 +102,7 @@ export default Vue.extend({
   this.file = this.$refs.file.files[0];
   var storageRef = storage.ref();
 // Upload file and metadata to the object 'images/mountains.jpg'
-var uploadTask = storageRef.child('images/' + file.name).put(this.file);
+var uploadTask = storageRef.child( this.file.name).put(this.file);
 
 // Listen for state changes, errors, and completion of the upload.
 uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
@@ -132,11 +133,11 @@ uploadTask.on(firebase.storage.TaskEvent.STATE_CHANGED, // or 'state_changed'
     
       break
   }
-}, function() {
+},/*function() {
   uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
     console.log('File available at', downloadURL);
   });
-});
+}*/);
  }
 
 
