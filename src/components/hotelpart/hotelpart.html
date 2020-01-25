@@ -1,0 +1,59 @@
+<div class="main-hotel">
+	<header id="header">
+        <a href="#menu">Menu</a>
+    </header>
+
+<!-- Nav -->
+    <nav id="menu">
+        <ul class="links">
+            <li> <router-link to=" ">Home</router-link></li>
+            <li><a href="generic.html">Generic</a></li>
+            <li><a href="elements.html">Elements</a></li>
+            <li >  <router-link to="/fixeddeparture">Fixed Departure</router-link></li>
+
+        </ul>
+    </nav>
+
+<!-- Main -->
+    <div id="main">
+
+    <!-- One -->
+        <section class="wrapper style1">
+            <div class="inner">
+                <header class="align-center">
+                    <h2>HOTEL DEALS</h2>
+                    <p>Cras sagittis turpis sit amet est tempus, sit amet consectetur purus tincidunt.</p>
+                </header>
+                <div class="table-wrapper">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                              <th v-for = "key in keys"
+                                  >
+                                {{ key | capitalize }}
+                                <span class="arrow" >
+                                </span>
+                              </th>
+                            </tr>
+                          </thead> 
+                        <tr v-for="item in data" class="text-white">
+                           
+                           <td v-for= "value in item">{{value}}</td>
+            
+                        </tr>
+            
+            
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    <!-- Three -->
+       
+
+    </div>
+
+<!-- Footer -->
+   
+
+</div>
