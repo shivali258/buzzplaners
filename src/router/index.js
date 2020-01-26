@@ -5,6 +5,9 @@ import fixeddeparture from '../components/fixeddepature/fixeddeparture'
 import admin from '../components/admin/admin'
 import hotel from '../components/hotelpart/hotelpart'
 import footer from '../components/footer/footer'
+import contactus from '../components/contact us/contactus';
+import about from '../components/about us/about'
+
 Vue.use(Router);
 
 export default new Router({
@@ -36,6 +39,16 @@ export default new Router({
   path: '/hotel',
   name: 'hotel',
   component: hotel
+},
+{
+  path: '/contactus',
+  name: 'contactus',
+  component: contactus
+},
+{
+  path: '/about',
+  name: 'about',
+  component: about
 }
 
 
