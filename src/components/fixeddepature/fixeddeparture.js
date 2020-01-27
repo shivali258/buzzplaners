@@ -45,11 +45,12 @@ export default Vue.extend({
       if (parts.length == 2) return parts.pop().split(";").shift();
     }
   },
-  created: function () {
-    console.log("1")
-    console.log(this.getData())
 
+
+  created: function () {   
     
+    
+    this.getData()
 
     this.data = JSON.parse(this.getCookie("data"))
     
