@@ -39,6 +39,7 @@
                                 <tr>
                                     <td>Fixed Departure</td>
                                     <td><input type="file" id="csv_file" name="csv_file"  @change="loadCSV($event)">
+                                        
                                     </td>
 
 
@@ -48,7 +49,8 @@
                                     <td>Hotel</td>
                                     <td><input type="file" id="file" ref="file" v-on:change="download()"/>
                                     </td>
-                                        
+                                    <td><input type="file" id="csv_file" name="csv_file"  @change="loadCSVHotel($event)">
+      
                                 </tr>  
                                 <tr>
                                     <td>Fixed Departure</td>

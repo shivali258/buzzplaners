@@ -47,7 +47,7 @@ export default Vue.extend({
   },
   created: function () {
     console.log("1")
-    console.log(this.getData())
+    this.getData()
 
     
 

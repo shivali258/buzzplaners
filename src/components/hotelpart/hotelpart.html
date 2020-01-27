@@ -1,18 +1,4 @@
 <div class="main-hotel">
-	<header id="header">
-        <a href="#menu">Menu</a>
-    </header>
-
-<!-- Nav -->
-    <nav id="menu">
-        <ul class="links">
-            <li> <router-link to=" ">Home</router-link></li>
-            <li><a href="generic.html">Generic</a></li>
-            <li><a href="elements.html">Elements</a></li>
-            <li >  <router-link to="/fixeddeparture">Fixed Departure</router-link></li>
-
-        </ul>
-    </nav>
 
 <!-- Main -->
     <div id="main">
@@ -30,7 +16,7 @@
                             <tr>
                               <th v-for = "key in keys"
                                   >
-                                {{ key | capitalize }}
+                                {{ key }}
                                 <span class="arrow" >
                                 </span>
                               </th>

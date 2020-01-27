@@ -89,6 +89,31 @@ export default Vue.extend({
         alert('FileReader are not supported in this browser.');
       }
     },
+    loadCSVHotel(e) {
+      var vm = this
+      if (window.FileReader) {
+        var reader = new FileReader();
+        reader.readAsText(e.target.files[0]);
+        // Handle errors load
+        reader.onload = function(event) {
+          var csv = event.target.result;
+          vm.parse_csv = vm.csvJSON(csv)
+          //db.collection("cities").doc("LA").set(vm.parse_csv  )
+          
+          db.collection("Hotels").doc("Hotels").set(Object.assign({},vm.parse_csv))
+
+      //    db.collection('users').doc("fa").set(Object.assign({},vm.parse_csv));
+          
+        };
+        reader.onerror = function(evt) {
+          if(evt.target.error.name == "NotReadableError") {
+            alert("Canno't read file !");
+          }
+        };
+      } else {
+        alert('FileReader are not supported in this browser.');
+      }
+    },
     handleFileUpload(){
       this.file = this.$refs.file.files[0];
       var storageRef = storage.ref();
