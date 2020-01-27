@@ -14,18 +14,40 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                              <th v-for = "key in keys"
-                                  >
-                                {{ key }}
-                                <span class="arrow" >
-                                </span>
-                              </th>
+                              <th>S. No.</th>
+                              <th>Sector</th>
+                              <th>Hotel Name</th>
+                              <th>Location</th>
+                              <th>Category</th>
+                              <th>Room Type</th>
+                              <th>CP Only(per night)</th>
+                              <th>2N & 3D Packages CPAI</th>
+                              <th>2N & 3D Packages MAPAI</th>
+                              <th>2N & 3D Packages APAI</th>
+                              <th>3N & 4D Packages CPAI</th>
+                              <th>3N & 4D Packages MAPAI</th>
+                              <th>3N & 4D Packages APAI</th>
+                              <th>For More details</th>   
+                                
+                              
                             </tr>
                           </thead> 
                         <tr v-for="item in data" class="text-white">
-                           
-                           <td v-for= "value in item">{{value}}</td>
-            
+                            <td>{{item["S.No"]}}</td>
+                            <td>{{item["Sector"]}}</td>
+                           <td>{{item["Hotel Name"]}}</td>
+                           <td>{{item["Location"]}}</td>
+                           <td>{{item["Category"]}}</td>
+                           <td>{{item["Room Type"]}}</td>
+                           <td>{{item["CP Only(per night)"]}}</td>
+                           <td>{{item["2N 3D Packages CPAI"]}}</td>
+                           <td>{{item["2N 3D Packages MAPAI"]}}</td>
+                           <td>{{item["23APAI"]}}</td>
+                           <td>{{item["3N 4D Packages CPAI"]}}</td>
+                           <td>{{item["3N 4D Packages MAPAI"]}}</td>
+                           <td>{{item["3N 4D Packages APAI"]}}</td>
+                           <td>{{item["For More Details"]}}</td>
+
                         </tr>
             
             

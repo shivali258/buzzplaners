@@ -32,17 +32,17 @@ export default Vue.extend({
     }
   },
   methods: {
-    sortBy: function (key) {
+ /*   sortBy: function (key) {
       var vm = this
       vm.sortKey = key
       vm.sortOrders[key] = vm.sortOrders[key] * -1
-    },
+    },*/
     csvJSON(csv){
       var vm = this
       var lines = csv.split("\n")
       var result = []
-      var headers = lines[0].split(",")
-      vm.parse_header = lines[0].split(",") 
+      var headers = lines[0].split("\t")
+      vm.parse_header = lines[0].split("\t") 
       lines[0].split(",").forEach(function (key) {
         vm.sortOrders[key] = 1
       })
@@ -51,7 +51,7 @@ export default Vue.extend({
         if (indexLine < 1) return // Jump header line
         
         var obj = {}
-        var currentline = line.split(",")
+        var currentline = line.split("\t")
         
         headers.map(function(header, indexHeader){
           obj[header] = currentline[indexHeader]

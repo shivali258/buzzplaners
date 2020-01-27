@@ -32,19 +32,19 @@ export default Vue.extend({
     getData(){
       window.result = "test"
       var docRef = db.collection('Hotels').doc("Hotels");
-    docRef.get()
-    .then(function(doc) {
-      if (doc.exists) {
+        docRef.get()
+        .then(function(doc) {
+        if (doc.exists) {
           console.log("Document data:", doc.data())
           window.result = doc.data()
           document.cookie = "data=" + JSON.stringify(doc.data())
-      } else {
+        } else {
           // doc.data() will be undefined in this case
           console.log("No such document!");
-      }
-  }).catch(function(error) {
-      console.log("Error getting document:", error);
-  });
+        }
+      }).catch(function(error) {
+          console.log("Error getting document:", error);
+      });
   
   return window.result
 },
